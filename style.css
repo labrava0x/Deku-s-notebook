@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Reenie+Beanie&display=swap');
+
+body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive, sans-serif;
+    overflow-x: hidden;
+}
+.campus-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+    text-align: center;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.campus-logo {
+    font-size: 2.5rem;       /* Large, prominent sizing */
+    font-weight: 900;        /* Extra bold to match the anime prop */
+    letter-spacing: 0.3em;   /* Wide tracking typical of composition books */
+    text-transform: uppercase;
+    color: #1a1a1a;          /* Deep ink tone */
+    margin: 0;
+}
+
+.ruled-info {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555555;
+    margin-top: 0.25rem;
+    letter-spacing: 0.05em;
+}
+/* --------------------------------------------------
+   3D NOTEBOOK COVER OVERLAY FIX
+-------------------------------------------------- */
+.notebook-cover {
+    position: fixed;        /* Covers the whole viewport over page 1 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e3a2b; /* Deep notebook green */
+    z-index: 9999;          /* Ensures cover stays strictly ON TOP until opened */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   CAMPUS LOGO & COVER HEADER
+-------------------------------------------------- */
+.campus-header {
+    text-align: center;
+    margin-bottom: 2rem;    /* Gives breathing room above the main title */
+}
+
+.campus-logo {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #e5dcc3;         /* Off-white/cream contrast against green cover */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.ruled-info {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #a3b899;
+    margin-top: 0.4rem;
+    letter-spacing: 0.1em;
+}
+
+/* --------------------------------------------------
+   TITLE BOX SPACING
+-------------------------------------------------- */
+.title-box h1 {
+    font-size: 2rem;
+    color: #d4a373;         /* Warm contrast text */
+    margin-top: 1rem;
+}
+
+.notebook-cover.flipped {
+    transform: rotateY(-110deg);
+    pointer-events: none;
+}
+
+.spine-tape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: #112616;
+    border-right: 2px solid #000;
+}
+
+.campus-header {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.cover-content {
+    text-align: center;
+    border: 4px double #f7f5ef;
+    padding: 40px 60px;
+    background: rgba(26, 56, 34, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.title-box h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.title-box h1 {
+    font-size: 2.8rem;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.vol-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e5c158;
+}
+
+.owner-tag {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+.open-notebook-btn {
+    margin-top: 30px;
+    background: #e5c158;
+    color: #1a3822;
+    border: 3px solid #1a3822;
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #000;
+    transition: all 0.1s ease;
+}
+
+.open-notebook-btn:hover {
+    background: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+
+/* --- True Notebook Ruled Paper Spread --- */
+.page-spread {
+    display: none;
+    background-color: #f7f5ef;
+    background-image: linear-gradient(#e5e1d3 1px, transparent 1px);
+    background-size: 100% 2em; /* Authentic notebook line spacing */
+    border: 4px solid #1a2f1c;
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 50px 60px;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Caveat', cursive, sans-serif; /* Handwritten feel */
+    font-size: 1.4rem;
+    color: #112;
+}
+
+.page-spread.active-page {
+    display: block;
+}
+
+/* Notebook Header - Hand-drawn style */
+.page-header-bar, .header {
+    border-bottom: 3px dashed #1a2f1c;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    color: #1a2f1c;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a2f1c;
+}
+
+.stamp-verified {
+    border: 2px solid #8b0000;
+    color: #8b0000;
+    padding: 2px 8px;
+    font-weight: bold;
+    transform: rotate(-3deg);
+    font-size: 1.1rem;
+}
+
+/* Layout Grid for Sketch + Notes */
+.single-entry-layout, .hero-main {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Remove modern UI boxes — make it look like ink on paper */
+.overview-box, .subtext, .deku-notes {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+    line-height: 2rem;
+    color: #0f1c2e;
+}
+
+.key-points {
+    margin-bottom: 25px;
+    line-height: 1.8rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    color: #1a2f1c;
+    letter-spacing: 1px;
+}
+
+.hero-text h1, .entry-analysis-details h3 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #1a2f1c;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+/* Sketch Frame with tape/polaroid vibe */
+.hero-image img, .entry-image-container img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #1a2f1c;
+    background: #fff;
+    padding: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg); /* Slight organic notebook tilt */
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.hero-image img:hover, .entry-image-container img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Interactive Badge */
+.art-audio-badge {
+    margin-top: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: #8b0000;
+    cursor: pointer;
+}
+
+/* Handwritten Navigation Buttons */
+.page-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.page-controls button, .nav-links a {
+    background: #fff;
+    border: 2px solid #1a2f1c;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    padding: 6px 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #1a2f1c;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    color: #1a2f1c;
+}
+
+.page-controls button:hover, .nav-links a:hover {
+    background: #1a2f1c;
+    color: #f7f5ef;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- PAGE 1 ARTWORK STACK & PLUS ULTRA --- */
+.hero-artwork-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.page-plus-ultra-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #1a2f1c;
+    background: #fff;
+    padding: 6px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg); /* Organic tilt opposite to the sketch */
+    display: block;
+    box-sizing: border-box;
+}

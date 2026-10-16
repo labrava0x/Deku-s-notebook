@@ -31,16 +31,9 @@
         </div>
     </div>
 
-    <!-- Audio Elements -->
-    <audio id="mha-op-audio" src="assets/the-day.mp3" preload="auto" loop></audio>
-    <audio id="deku-audio" src="assets/deku-voice.mp3" preload="auto"></audio>
-    <audio id="bakugo-audio" src="assets/bakugo-shine.mp3" preload="auto"></audio>
-    <audio id="uraraka-audio" src="assets/uraraka-voice.mp3" preload="auto"></audio>
-    <audio id="iida-audio" src="assets/iida-voice.mp3" preload="auto"></audio>
-    <audio id="todoroki-audio" src="assets/todoroki-voice.mp3" preload="auto"></audio>
-
     <!-- Page Container Wrapper -->
     <main id="notebook-pages" class="notebook-pages">
+        
         <!-- ==========================================
              PAGE 1: COSTUME ALPHA SPREAD (DEKU VOICE)
              ========================================== -->
@@ -64,9 +57,9 @@
                     
                     <p class="subtext">
                         <strong>Structural Notes & Revisions:</strong><br>
-                        - <em>Cowl / Headgear:</em> Integrated ear-coph antennas must house local frequency comms, but watch out for wind-shear drag at high speeds. Rabbit-ear aesthetic is non-negotiable (homage), though material must be lightweight carbon-mesh.<br>
-                        - <em>Torso & Padding:</em> High-density breathable synthetic fabric. Crucial for preventing heat stroke during prolonged combat maneuvers. Must include reinforced chest plating to absorb blunt-force trauma.<br>
-                        - <em>Gauntlets & Knees:</em> Shock-absorbing shock pads required on joint pivots. If I overshoot muscle output capacity, these pads act as the first line of defense against bone fractures before full quirk mastery! Plus Ultra!!
+                        <em>Cowl / Headgear:</em> Integrated ear-coph antennas must house local frequency comms, but watch out for wind-shear drag at high speeds. Rabbit-ear aesthetic is non-negotiable (homage), though material must be lightweight carbon-mesh.<br>
+                        <em>Torso & Padding:</em> High-density breathable synthetic fabric. Crucial for preventing heat stroke during prolonged combat maneuvers. Must include reinforced chest plating to absorb blunt-force trauma.<br>
+                        <em>Gauntlets & Knees:</em> Shock-absorbing shock pads required on joint pivots. If I overshoot muscle output capacity, these pads act as the first line of defense against bone fractures before full quirk mastery! Plus Ultra!!
                     </p>
                     
                     <div class="page-controls">
@@ -74,15 +67,27 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Stacked Sketch & Plus Ultra -->
+                <!-- Right Column: Stacked Sketch, YouTube Player & Plus Ultra -->
                 <div class="hero-artwork-stack">
                     <div class="hero-image interactive-artwork" id="deku-art-trigger">
-                        <img src="assets/Deku.costume.jpg" alt="Deku First Hero Costume Alpha Concept Sketch">
-                        <div class="art-audio-badge">🔊 Click sketch to hear Deku's muttering!</div>
+                        <!-- Updated image path -->
+                        <img src="deku.costume.jpg" alt="Deku First Hero Costume Alpha Concept Sketch">
+                        <div class="art-audio-badge">🔊 Deku Analysis Audio</div>
                     </div>
                     
+                    <!-- DEKU MUTTERING YOUTUBE WIDGET -->
+                    <div class="all-might-widget">
+                        <div class="all-might-header">
+                            <span>🥦 DEKU MUTTERING & THEME PLAYER</span>
+                        </div>
+                        <div class="widget-frame-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/B9WXuM3ts8o?si=nENgNDIVWPswdT99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
                     <div class="hero-image">
-                        <img src="assets/PlusUltra.jpeg" alt="Plus Ultra Graphic" class="page-plus-ultra-img">
+                        <!-- Updated image path -->
+                        <img src="plusultra.jpeg" alt="Plus Ultra Graphic" class="page-plus-ultra-img">
                     </div>
                 </div>
             </div>
@@ -98,10 +103,24 @@
             </header>
 
             <div class="single-entry-layout">
-                <div class="entry-image-container interactive-artwork" id="bakugo-art-trigger">
-                    <img src="Bakugoquirk.jpeg" alt="Bakugo Explosion Quirk Notebook Entry">
-                    <div class="art-audio-badge">🔊 Click sketch to trigger audio!</div>
+                <div class="entry-image-container">
+                    <!-- Bakugo Sketch -->
+                    <div class="hero-image interactive-artwork" id="bakugo-art-trigger">
+                        <img src="Bakugoquirk.jpeg" alt="Bakugo Explosion Quirk Notebook Entry">
+                        <div class="art-audio-badge">🔊 Bakugo Analysis Audio</div>
+                    </div>
+
+                    <!-- KATSUKI BAKUGO YOUTUBE WIDGET -->
+                    <div class="all-might-widget">
+                        <div class="all-might-header">
+                            <span>💥 EXPLOSION PLAYER: "HOWITZER IMPACT"</span>
+                        </div>
+                        <div class="widget-frame-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Kjsr72lmaMg?si=gY2UKnToUVjmMMg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="entry-analysis-details">
                     <h3>Quirk: Explosion (爆破)</h3>
                     <p class="deku-notes">
@@ -129,10 +148,24 @@
             </header>
 
             <div class="single-entry-layout">
-                <div class="entry-image-container interactive-artwork" id="uraraka-art-trigger">
-                    <img src="Uravityquirk.jpeg" alt="Uraraka Zero Gravity Notebook Entry">
-                    <div class="art-audio-badge">🔊 Click sketch to trigger audio!</div>
+                <div class="entry-image-container">
+                    <!-- Ochaco Sketch -->
+                    <div class="hero-image interactive-artwork" id="uraraka-art-trigger">
+                        <img src="Uravityquirk.jpeg" alt="Uraraka Zero Gravity Notebook Entry">
+                        <div class="art-audio-badge">🔊 Uraraka Analysis Audio</div>
+                    </div>
+                    
+                    <!-- OCHACO YOUTUBE WIDGET -->
+                    <div class="all-might-widget">
+                        <div class="all-might-header">
+                            <span>💖 URAVITY PLAYER: "CRUSH"</span>
+                        </div>
+                        <div class="widget-frame-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7XJn8eanJxM?si=Gkg7KC41f5DyIJ2K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="entry-analysis-details">
                     <h3>Quirk: Zero Gravity (無重力)</h3>
                     <p class="deku-notes">
@@ -160,10 +193,24 @@
             </header>
 
             <div class="single-entry-layout">
-                <div class="entry-image-container interactive-artwork" id="iida-art-trigger">
-                    <img src="Ingeniumquirk.jpeg" alt="Tenya Iida Engine Quirk Notebook Entry">
-                    <div class="art-audio-badge">🔊 Click sketch to trigger audio!</div>
+                <div class="entry-image-container">
+                    <!-- Iida Sketch -->
+                    <div class="hero-image interactive-artwork" id="iida-art-trigger">
+                        <img src="Ingeniumquirk.jpeg" alt="Tenya Iida Engine Quirk Notebook Entry">
+                        <div class="art-audio-badge">🔊 Iida Analysis Audio</div>
+                    </div>
+
+                    <!-- TENYA IIDA YOUTUBE WIDGET -->
+                    <div class="all-might-widget">
+                        <div class="all-might-header">
+                            <span>⚡ INGENIUM PLAYER: "ENGINE"</span>
+                        </div>
+                        <div class="widget-frame-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bUsqPvFyUfA?si=3y60X64pfb2ZnwAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="entry-analysis-details">
                     <h3>Quirk: Engine (エンジン)</h3>
                     <p class="deku-notes">
@@ -191,10 +238,24 @@
             </header>
 
             <div class="single-entry-layout">
-                <div class="entry-image-container interactive-artwork" id="todoroki-art-trigger">
-                    <img src="Shotoquirk.jpeg" alt="Shoto Todoroki Half-Cold Half-Hot Notebook Entry">
-                    <div class="art-audio-badge">🔊 Click sketch to trigger audio!</div>
+                <div class="entry-image-container">
+                    <!-- Todoroki Sketch -->
+                    <div class="hero-image interactive-artwork" id="todoroki-art-trigger">
+                        <img src="Shotoquirk.jpeg" alt="Shoto Todoroki Half-Cold Half-Hot Notebook Entry">
+                        <div class="art-audio-badge">🔊 Todoroki Analysis Audio</div>
+                    </div>
+
+                    <!-- SHOTO TODOROKI YOUTUBE WIDGET -->
+                    <div class="all-might-widget">
+                        <div class="all-might-header">
+                            <span>❄️🔥 SHOTO PLAYER: "HALF-COLD HALF-HOT"</span>
+                        </div>
+                        <div class="widget-frame-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/66jOAEj2JcU?si=jCbCzFJOtR0xyNI3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="entry-analysis-details">
                     <h3>Quirk: Half-Cold Half-Hot (半冷半燃)</h3>
                     <p class="deku-notes">
@@ -206,12 +267,23 @@
                     </ul>
                     <div class="page-controls">
                         <button class="prev-page-btn" data-prev="4">← Previous Page (Ingenium)</button>
-                        <button class="next-page-btn" data-next="6">Next Page →</button>
+                        <button class="next-page-btn" data-next="1">← Return to Cover</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- GLOBAL BACKGROUND MUSIC PLAYER ("THE DAY") -->
+    <div id="global-bg-music" class="bg-music-bar">
+        <div class="music-info">
+            <span class="music-icon">🎵</span>
+            <span class="music-title">NOW PLAYING: "THE DAY" (MHA OP)</span>
+        </div>
+        <div class="bg-player-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gUCmjNHIrcU?si=fvzhW4uRCvpuHXU7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
